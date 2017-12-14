@@ -1,0 +1,5 @@
+127.0.0.1 - - [14/Dec/2017:21:23:31 +0800] "GET /get_key_words?s=%E6%88%91%E7%88%B1%E4%BD%A0%E4%B8%AD%E5%9B%BD HTTP/1.1" 200 6 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36"
+127.0.0.1 - - [14/Dec/2017:21:24:17 +0800] "POST /get_key_words HTTP/1.1" 200 66 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36"
+127.0.0.1 - - [14/Dec/2017:21:24:26 +0800] "POST /get_key_words HTTP/1.1" 200 52 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36"
+127.0.0.1 - - [14/Dec/2017:21:24:33 +0800] "POST /get_key_words HTTP/1.1" 200 52 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36"
+127.0.0.1 - - [14/Dec/2017:21:24:41 +0800] "POST /get_key_words HTTP/1.1" 200 57 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36"
