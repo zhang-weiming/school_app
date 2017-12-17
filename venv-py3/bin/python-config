@@ -1,4 +1,4 @@
-#!/home/zwm/Workplace/SchoolApp/venv-py3/bin/python
+#!/media/zwm/Documents/Workplace/SchoolApp/venv-py3/bin/python
 
 import sys
 import getopt

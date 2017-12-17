@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/zwm/Workplace/SchoolApp/venv-py3"
+VIRTUAL_ENV="/media/zwm/Documents/Workplace/SchoolApp/venv-py3"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

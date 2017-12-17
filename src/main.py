@@ -16,17 +16,24 @@ def index():
 def get_key_words():
     s = ''
     max_words = 3
+    update_hot_word = 'True'
     # get doc
     if request.method == 'POST':
         s = request.form.get('s', type=str, default='')
-        max_words = request.form.get('max_words', type=str, default=3)
-        if (max_words != 3):
-            print('[POST] max_words yes')
-            max_words = int(max_words.strip())
-            print('\tmax_words =', max_words)
-        else:
-            print('[POST] max_words no')
-    else:
+        update_hot_word = request.form.get('update_hot_word', type=str, default='True') # 是否更新hot_word表
+        try:
+            max_words = request.form.get('max_words', type=str, default='3')
+            # print('\tmax_words=[', type(max_words), ']')
+            if (max_words != ''): # 有max_words参数（可能是默认值'3'）
+                print('[POST] max_words yes')
+                max_words = int(max_words.strip())
+                print('\tmax_words =', max_words)
+            else:
+                max_words = 3
+                print('[POST] max_words no')
+        except: # max_words参数处理异常，设置默认值3
+            max_words = 3
+    elif request.method == 'GET':
         s = request.args.get('s')
         max_words = request.args.get('max_words')
         if max_words == None:
