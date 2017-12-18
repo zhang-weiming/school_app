@@ -5,7 +5,6 @@ import threading
 import sys
 sys.path.append('/home/zwm/Workplace/SchoolApp/src')
 import db_helper
-import os
 
 MAX_WORDS_DEFAULT = 3
 MAX_HOT_WORDS_DEFAULT = 20
@@ -58,23 +57,16 @@ def get_key_words():
             max_hot_words = int(request.args.get('max_hot_words').strip())
         except:
             max_hot_words = MAX_HOT_WORDS_DEFAULT
-    
-    print( '[PID]', os.getppid() )
-
     # get key words
     if s == '': # 文章内容为空，不分析
         return 'null'
     else: # 分析关键词
-        try:
-            pynlpir.open()
-            key_word_list = pynlpir.get_key_words(s, max_words=max_words, weighted=False)
-            # temp_str = ''
-            for i in range(len(key_word_list)):
-                key_word_list[i] = key_word_list[i]
-        except:
-            key_word_list = []
-        else:
-            pynlpir.close()
+        pynlpir.open()
+        key_word_list = pynlpir.get_key_words(s, max_words=max_words, weighted=False)
+        # temp_str = ''
+        for i in range(len(key_word_list)):
+            key_word_list[i] = key_word_list[i]
+        pynlpir.close()
         if update_hot_word == 'True':
             # 新开一个线程，更新数据库
             print('[update_hot_word] True')

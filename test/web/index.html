@@ -5,14 +5,19 @@
         <title>测试</title>
     </head>
     <body>
-        <form action="http://localhost:9090/get_key_words" method="post">
-            <input name='s'>s<br >
-            <input name='max_words'>max_words<br >
+        POST<br>
+        <form action="http://localhost:8081/get_key_words" method="post">
+            <input name='s' placeholder="s"><br >
+            <input name='max_words' placeholder="max_words">max_words<br >
+            <input name='update_hot_word' placeholder="update_hot_word"><br >
             <button type="submit">提交</button>
         </form>
         <hr>
-        <form action="http://localhost:9090/get_key_words" method="post">
-            <input name='s'>s<br >
+        GET<br>
+        <form action="http://localhost:8081/get_key_words" method="get">
+            <input name='s' placeholder="s"><br >
+            <input name='max_words' placeholder="max_words">max_words<br >
+            <input name='update_hot_word' placeholder="update_hot_word"><br >
             <button type="submit">提交</button>
         </form>
     </body>
